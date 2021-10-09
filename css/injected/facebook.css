@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("chrome-extension://__MSG_@@extension_id__/fonts/OpenSans.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+@keyframes background-move {
+  0% {
+    background-position: 17% 0%;
+  }
+  50% {
+    background-position: 84% 100%;
+  }
+  100% {
+    background-position: 17% 0%;
+  }
+}
+.facebook-container * {
+  box-sizing: content-box !important;
+  font: inherit !important;
+  font-size: 100% !important;
+  font-family: inherit !important;
+  top: initial !important;
+  right: initial !important;
+  bottom: initial !important;
+  left: initial !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: initial !important;
+  position: initial !important;
+  vertical-align: baseline !important;
+  display: initial !important;
+}
+.facebook-container * ::before, .facebook-container * ::after {
+  bottom: initial !important;
+  box-sizing: content-box !important;
+  font: inherit !important;
+  font-size: 100% !important;
+  font-family: inherit !important;
+  left: initial !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: initial !important;
+  right: initial !important;
+  top: initial !important;
+  vertical-align: baseline !important;
+  display: initial !important;
+}
+
+.facebook-container * {
+  font-family: "Open Sans" !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  line-height: normal !important;
+}
+.facebook-container a {
+  cursor: pointer !important;
+  text-decoration: none !important;
+  color: initial !important;
+}
+.facebook-container a:hover {
+  color: #e2106e !important;
+}
+
+.facebook-button-blue, .facebook-button-small, .facebook-button {
+  background: none !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: #e2106e !important;
+  border: 1px solid #e2106e !important;
+  border-radius: 4px !important;
+  padding: 0.3333333333em 0.8333333333em 0.3333333333em 0.8333333333em !important;
+}
+.facebook-button-blue:hover, .facebook-button-small:hover, .facebook-button:hover {
+  box-shadow: none !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  background: #e2106e !important;
+  box-shadow: none !important;
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 0 #e2106e;
+  }
+  70% {
+    box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse-shadow--collection {
+  0% {
+    box-shadow: 0 0;
+  }
+  70% {
+    box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse-shadow--onboarding {
+  0% {
+    box-shadow: 0 0 0 0 #e2106e;
+  }
+  30% {
+    box-shadow: 0 0 0 0 #e2106e;
+  }
+  80% {
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#unfollower-container {
+  width: 100% !important;
+  height: 170px !important;
+  position: fixed !important;
+  bottom: 0px !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.facebook-container {
+  user-select: none !important;
+  width: 500px !important;
+  height: 150px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  padding: 10px !important;
+  position: absolute !important;
+  margin-bottom: 10px !important;
+  border-radius: 10px !important;
+  bottom: 10px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+}
+.facebook-container > * {
+  color: #6d6d6d !important;
+  font-size: 20px !important;
+  font-family: "Open Sans" !important;
+}
+.facebook-strike {
+  text-decoration: line-through !important;
+}
+.facebook-subtle a {
+  cursor: pointer !important;
+  text-decoration: none !important;
+  color: #8a8a8a !important;
+}
+.facebook-subtle a:hover {
+  color: #e2106e !important;
+}
+.facebook-normal a {
+  color: #e2106e !important;
+}
+.facebook-normal a:hover {
+  color: #b20d57 !important;
+}
+.facebook-bottom-text {
+  font-size: 12px !important;
+  text-align: center !important;
+  color: #bdbdbd !important;
+}
+.facebook-bottom-text a {
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+.facebook-bold-text {
+  color: #e2106e !important;
+}
+.facebook-text {
+  font-size: 13px !important;
+  text-align: center !important;
+  line-height: 1.5em !important;
+  color: #4f4f4f !important;
+}
+.facebook-alt-headline {
+  font-size: 14px !important;
+  color: #6d6d6d !important;
+  text-align: center !important;
+}
+.facebook-alt-headline a {
+  color: #6d6d6d !important;
+  text-align: center !important;
+  line-height: 1.7em !important;
+  letter-spacing: 0.01em !important;
+}
+.facebook-tweaker {
+  margin-top: 8px !important;
+}
+.facebook-tweaker2 a {
+  color: #bdbdbd !important;
+}
+.facebook-tweaker2 a:hover {
+  color: #e2106e !important;
+}
+.facebook-text-larger {
+  font-size: 14px !important;
+}
+.facebook-small-text {
+  font-size: 12px !important;
+  color: #bdbdbd !important;
+}
+.facebook-small-text a {
+  color: #bdbdbd !important;
+}
+.facebook-button {
+  border: 1px none #e2106e !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+  background: #e2106e !important;
+}
+.facebook-button:hover {
+  background: #b20d57 !important;
+}
+.facebook-bottom-container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.facebook-button-small {
+  border: 1px none #e2106e !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  background: #e2106e !important;
+  color: #ffffff !important;
+}
+.facebook-button-blue {
+  border: 1px none #e2106e !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+  background: #e2106e !important;
+}
+.facebook-button-blue:hover {
+  background: #b20d57 !important;
+}
+.facebook-button-large {
+  font-size: 18px !important;
+  border: 1px none #e2106e !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  background: #e2106e !important;
+}
+.facebook-button-large:hover {
+  background: #b20d57 !important;
+}
+.facebook-headline {
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  margin-bottom: 10px !important;
+  color: #e2106e !important;
+  font-family: "Open Sans" !important;
+}
+.facebook-small-headline {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+  margin-top: 10px !important;
+  font-family: "Open Sans" !important;
+  color: #4f4f4f !important;
+}
+.facebook-close {
+  width: 20px !important;
+  height: 20px !important;
+  position: absolute !important;
+  -webkit-backface-visibility: hidden !important;
+  top: 5px !important;
+  opacity: 0.3 !important;
+  cursor: pointer !important;
+  right: 5px !important;
+  display: block !important;
+  z-index: 2 !important;
+  background: url("chrome-extension://__MSG_@@extension_id__/img/closegrey.svg") center center/12px no-repeat !important;
+}
+.facebook-close:hover {
+  opacity: 1 !important;
+}
+.facebook-logo {
+  width: 30px !important;
+  height: 30px !important;
+  background: url("chrome-extension://__MSG_@@extension_id__/img/logo.svg") center/30px no-repeat !important;
+}
+.facebook-logo-large {
+  width: 40px !important;
+  height: 40px !important;
+  background: url("chrome-extension://__MSG_@@extension_id__/img/logo.svg") center center/40px no-repeat !important;
+}
+.facebook-logo-corner {
+  width: 20px !important;
+  height: 20px !important;
+  position: absolute !important;
+  left: 10px !important;
+  top: 10px !important;
+  z-index: 1 !important;
+  background: url("chrome-extension://__MSG_@@extension_id__/img/logo.svg") center/20px no-repeat !important;
+}
+.facebook-logo-corner > div {
+  display: block !important;
+  position: static !important;
+}

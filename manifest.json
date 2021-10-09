@@ -1,0 +1,31 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+   "background": {
+      "scripts": [ "config.js", "js/vars/defaults.js", "js/vars/amplitude-credentials.js", "js/vendor/amplitude-instance.js", "js/vendor/moment.min.js", "js/background/utils/lib.js", "js/background/init.js", "js/background/settings.js", "js/background/logger.js", "js/background/listeners.js", "js/background/messager.js" ]
+   },
+   "browser_action": {
+      "default_popup": "html/pages/popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "config.js", "js/content/vars/vars.js", "js/content/storage/html.js", "js/vendor/moment.min.js", "js/content/utils/lib.js", "js/content/utils/fetch-retry.js", "js/content/unfollower2.js" ],
+      "matches": [ "*://www.facebook.com/*", "*://facebook.com/*", "*://web.facebook.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Unfollow Everything unfollows all friends, pages and groups in your Facebook News Feed.",
+   "icons": {
+      "128": "img/logo128.png",
+      "16": "img/logo16.png",
+      "48": "img/logo48.png"
+   },
+   "manifest_version": 2,
+   "name": "Unfollow Everything for Facebook",
+   "options_ui": {
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "html/pages/options_home.html"
+   },
+   "permissions": [ "storage", "idle", "tabs" ],
+   "version": "0.0.14",
+   "web_accessible_resources": [ "img/*", "fonts/*", "html/*", "css/*" ]
+}
